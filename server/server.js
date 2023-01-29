@@ -16,7 +16,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/',async(re, res) => {
+app.get('/',async(req, res) => {
     res.status(200).send({
         message: ' Hello from SoundWave'
     })
@@ -38,10 +38,10 @@ app.post('/',async( req, res) => {
         res.status(200).send({
             bot: response.data.choices[0].text
         })
-    } catch (error){
+   } catch (error){
         console.log(error);
         res.status(500)({error})
     }
 })
 
-app.listen(5000, () => console.log('Server is running on port http://localhost:5000 '))
+app.listen(5000, () => console.log('Server is running on port http://localhost:5000 '));
