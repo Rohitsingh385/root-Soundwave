@@ -78,7 +78,7 @@ function chatStripe (isAi, value, uniqueId){
 
     loader(messageDiv);
 
-       const response = await fetch('https://root-he1f.onrender.com',{
+       const response = await fetch('https://root-he1f.onrender.com/',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
